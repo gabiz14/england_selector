@@ -1,0 +1,169 @@
+<head>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script>
+     $(document).ready(function(){
+
+    var chosenGoalkeepers = [];
+    var chosenDefenders = [];
+    var chosenMidfilders = [];
+    var chosenForwards = [];
+    var squad = [];
+
+    $("#goalkeppers a").click(function(){
+      
+      $(this).addClass('chosen');
+        var value = $(this).html();
+        chosenGoalkeepers.push(value);
+        squad.push(value);
+        //console.log(chosenGoalkeepers);
+        //console.log(chosenGoalkeepers.length);
+        //console.log(squad.length);
+        var goalkeepersLength = chosenGoalkeepers.length;
+
+        if (squad.length == 23) {
+        $("#player-choice").addClass('full');
+        }
+        chosenGoalkeepers.toString();
+        document.getElementById("goalkeepers").innerHTML = chosenGoalkeepers;
+
+        document.getElementById("numberOfPlayers").innerHTML = squad.length;
+    });
+
+      $("#defenders a").click(function(){
+
+        $(this).addClass('chosen');
+        var value = $(this).html();
+        chosenDefenders.push(value);
+        squad.push(value);
+       // console.log(chosenDefenders);
+       // console.log(chosenDefenders.length);
+       // console.log(squad.length);
+
+        if (squad.length == 23) {
+        $("#player-choice").addClass('full');
+        }
+        chosenDefenders.toString();
+        document.getElementById("defence").innerHTML = chosenDefenders;
+
+        document.getElementById("numberOfPlayers").innerHTML = squad.length;
+      });
+
+      
+      $("#midfielders a").click(function(){
+
+        $(this).addClass('chosen');
+        var value = $(this).html();
+        chosenMidfilders.push(value);
+        squad.push(value)
+       // console.log(chosenMidfilders);
+       // console.log(chosenMidfilders.length);
+       // console.log(squad.length);
+
+        if (squad.length == 23) {
+        $("#player-choice").addClass('full');
+        }
+        chosenMidfilders.toString();
+        document.getElementById("midfield").innerHTML = chosenMidfilders;
+
+        document.getElementById("numberOfPlayers").innerHTML = squad.length;
+      });
+      
+      $("#attackers a").click(function(){
+
+        $(this).addClass('chosen');
+        var value = $(this).html();
+        chosenForwards.push(value);
+        squad.push(value);
+       // console.log(chosenForwards);
+       // console.log(chosenForwards.length);
+       // console.log(squad.length);
+
+        if (squad.length == 23) {
+        $("#player-choice").addClass('full');
+        }
+        chosenForwards.toString();
+        document.getElementById("forwards").innerHTML = chosenForwards;
+
+        document.getElementById("numberOfPlayers").innerHTML = squad.length;
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="player-choice">
+  <div id="goalkeppers">
+    <a href="#">Hart</a>
+    <a href="#">Pickford</a>
+    <a href="#">Butland</a>
+  </div>
+  <div id="defenders">
+    <a href="#">Walker</a>
+    <a href="#">Trippier</a>
+    <a href="#">Chambers</a>
+    <a href="#">Alexander-Arnold</a>
+    <a href="#">Clyne</a>
+    <a href="#">Stones</a>
+    <a href="#">Cahill</a>
+    <a href="#">Jones</a>
+    <a href="#">Smalling</a>
+    <a href="#">Maguire</a>
+    <a href="#">Gomez</a>
+    <a href="#">Dunk</a>
+    <a href="#">Keane</a>
+    <a href="#">Rose</a>
+    <a href="#">Shaw</a>
+    <a href="#">Baines</a>
+    <a href="#">Young</a>
+    <a href="#">Delph</a>
+    <a href="#">Bertrand</a>
+  </div>
+
+  <div id="midfielders">
+    <a href="#">Dier</a>
+    <a href="#">Henderson</a>
+    <a href="#">Milner</a>
+    <a href="#">Oxlade-Chamberlain</a>
+    <a href="#">Carrick</a>
+    <a href="#">Livermore</a>
+    <a href="#">Cork</a>
+    <a href="#">Loftus-Cheek</a>
+    <a href="#">Cook</a>
+    <a href="#">McTominay</a>
+    <a href="#">Foden</a>
+    <a href="#">Wilshire</a>
+    <a href="#">Sessengnon</a>
+  </div>
+
+  <div id="attackers">
+    <a href="#">Kane</a>
+    <a href="#">Defoe</a>
+    <a href="#">Walcott</a>
+    <a href="#">Murray</a>
+    <a href="#">Rashford</a>
+    <a href="#">Lingard</a>
+    <a href="#">Sterling</a>
+    <a href="#">Welbeck</a>
+    <a href="#">Rodriguez</a>
+    <a href="#">Barnes</a>
+    <a href="#">Ali</a>
+  </div>
+  </div>
+
+  <div id="numberOfPlayers">
+    <p></p>
+  </div>
+  <div class="chosen-players" id="goalkeepers">
+    <p></p>
+  </div>
+  <div class="chosen-players" id="defence">
+    <p></p>
+  </div>
+  <div class="chosen-players" id="midfield">
+    <p></p>
+  </div>
+  <div class="chosen-players" id="forwards">
+    <p></p>
+  </div>
+</body>
